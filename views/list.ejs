@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>list of records</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+     <h2>Listing Record</h2>
+     <table class="table table-bordered">
+       <thead>
+         <tr>
+           <th>NAMES</th>
+           <th>NATIONALITY</th>
+           <th>DELETE </th>
+           <th>UPDATE</th>
+         </tr>
+       </thead>
+       <tbody>
+
+         <%for(var i=0;i<output.length;i++){%>
+               <tr>
+              <td><%=output[i].name%></td>
+              <td><%=output[i].nationality%></td>
+              <td><a href="/delete/<%=output[i].id%>">delete</a></td>
+              <td><a href="/update/<%=output[i].id%>">update</a></td>
+            </tr>
+        <%}%>
+
+       <tbody>
+
+       </tbody>
+     </table>
+   </div>
+
+    </body>
+    </html>
